@@ -32,6 +32,7 @@ class App extends StatelessWidget {
         child: Icon(
           Icons.add,
           color: Colors.black,
+          size: 40,
           ),
         backgroundColor: Colors.green,
         ),
