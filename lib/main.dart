@@ -17,11 +17,27 @@ class App extends StatelessWidget {
     
     return Scaffold(
       appBar: AppBar(
-        title: const Text("hello xd"),
+        title: const Text("hello  "),
         centerTitle: true,
         backgroundColor: Colors.green[900],
       ),
-      body:  Container(),
+      body:  Container(
+        color: Colors.grey[300],
+        child: const Text("hello"),
+
+        //Padding is inside the container
+
+        // padding: const EdgeInsets.all(40),
+        /*padding: const EdgeInsets.symmetric(
+          vertical: 50,
+          horizontal: 50,
+          ),*/
+        padding: const EdgeInsets.fromLTRB(40,40,40,40),
+
+        //Margin is outside of container
+        margin: const EdgeInsets.all(50),
+        
+      ),
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
         child: Icon(
