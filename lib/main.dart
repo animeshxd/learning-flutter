@@ -21,7 +21,7 @@ class App extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[900],
       ),
-      body:  Center(
+      body:  const Center(
         /*child:  Image(
           // image: NetworkImage("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", scale: 1))
           //image: AssetImage("assets/pexels-photo-1535162.jpeg"))
@@ -48,6 +48,8 @@ class App extends StatelessWidget {
             ),
           ),*/
 
+
+        /*
           child: ElevatedButton.icon(
             onPressed: null, 
             icon: const Icon(
@@ -67,6 +69,16 @@ class App extends StatelessWidget {
               backgroundColor: MaterialStateProperty.all<Color>((Colors.yellow[800])!)
             ),
             ),
+            */
+            
+            child: IconButton(
+              onPressed: null,
+              icon: Icon(
+                Icons.mail,
+                size: 50,
+                color: Colors.blue,
+                ),
+              ),
           
       ),
       floatingActionButton: const FloatingActionButton(
