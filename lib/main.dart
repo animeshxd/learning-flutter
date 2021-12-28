@@ -19,13 +19,24 @@ class App extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[900],
       ),
-      body: Center(
+      body:  Center(
         /*child:  Image(
           // image: NetworkImage("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", scale: 1))
           //image: AssetImage("assets/pexels-photo-1535162.jpeg"))
         )*/
-        child: Image.asset("assets/pexels-photo-1535162.jpeg"),
+        // child: Image.asset("assets/pexels-photo-1535162.jpeg"),
         // child: Image.network("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+        
+
+        // Buttons
+        // https://docs.flutter.dev/release/breaking-changes/buttons
+        child: TextButton(
+          onPressed: null,
+          child: const Text("hello"),
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>((Colors.red[100])!),
+          ),
+          ),
       ),
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
