@@ -20,16 +20,8 @@ class App extends StatelessWidget {
         backgroundColor: Colors.green[900],
       ),
       body: const Center(
-        child: Text(
-          "hello hello",
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 18,
-            fontWeight: FontWeight.normal,
-            fontFamily: "IndieFlower"
-
-            ),
-          ),
+        child:  Image(
+          image: NetworkImage("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", scale: 1))
         ),
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
