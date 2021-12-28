@@ -21,7 +21,8 @@ class App extends StatelessWidget {
       ),
       body: const Center(
         child:  Image(
-          image: NetworkImage("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", scale: 1))
+          // image: NetworkImage("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", scale: 1))
+          image: AssetImage("assets/pexels-photo-1535162.jpeg"))
         ),
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
