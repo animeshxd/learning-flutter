@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
+  runApp(const MaterialApp(
+    home: App()
+    ),
+  );
+}
+
+//StatelessWidget
+class App extends StatelessWidget {
+  const App({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
-        title: const Text("hello"),
+        title: const Text("hello xd"),
         centerTitle: true,
         backgroundColor: Colors.green[900],
       ),
       body: const Center(
         child: Text(
-          "hello",
+          "hello hello",
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -25,7 +36,6 @@ void main() {
         child: Text("+"),
         backgroundColor: Colors.green,
         ),
-    ),
-  ));
+      );
+  }
 }
-
