@@ -21,37 +21,7 @@ class App extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[900],
       ),
-      /*
-      body:  Container(
-        color: Colors.grey[300],
-        child: const Text("hello"),
-
-        //Padding is inside the container
-
-        // padding: const EdgeInsets.all(40),
-        /*padding: const EdgeInsets.symmetric(
-          vertical: 50,
-          horizontal: 50,
-          ),*/
-        padding: const EdgeInsets.fromLTRB(40,40,40,40),
-
-        //Margin is outside of container
-        margin: const EdgeInsets.all(50),
-        
-      ),
-      */
-      /*body: const Padding(
-        padding: EdgeInsets.all(50),
-        child: Text(
-          "text",
-          style: TextStyle(
-            backgroundColor: Colors.black,
-            color: Colors.white,
-            fontSize: 20
-          ),
-          ),
-        ),
-        */
+      
 
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
@@ -62,6 +32,8 @@ class App extends StatelessWidget {
           ),
         backgroundColor: Colors.green,
         ),
+
+        
         
       );
   }
