@@ -21,6 +21,7 @@ class App extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[900],
       ),
+      /*
       body:  Container(
         color: Colors.grey[300],
         child: const Text("hello"),
@@ -38,6 +39,20 @@ class App extends StatelessWidget {
         margin: const EdgeInsets.all(50),
         
       ),
+      */
+      /*body: const Padding(
+        padding: EdgeInsets.all(50),
+        child: Text(
+          "text",
+          style: TextStyle(
+            backgroundColor: Colors.black,
+            color: Colors.white,
+            fontSize: 20
+          ),
+          ),
+        ),
+        */
+
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
         child: Icon(
@@ -47,6 +62,7 @@ class App extends StatelessWidget {
           ),
         backgroundColor: Colors.green,
         ),
+        
       );
   }
 }
