@@ -24,12 +24,12 @@ class App extends StatelessWidget {
           // image: NetworkImage("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", scale: 1))
           //image: AssetImage("assets/pexels-photo-1535162.jpeg"))
         )*/
-        // child: Image.asset("assets/pexels-photo-1535162.jpeg"),
-        child: Image.network("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
+        child: Image.asset("assets/pexels-photo-1535162.jpeg"),
+        // child: Image.network("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"),
       ),
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
-        child: Text("+"),
+        child: Icon(Icons.add),
         backgroundColor: Colors.green,
         ),
       );
