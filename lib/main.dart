@@ -29,7 +29,10 @@ class App extends StatelessWidget {
       ),
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
-        child: Icon(Icons.add),
+        child: Icon(
+          Icons.add,
+          color: Colors.black,
+          ),
         backgroundColor: Colors.green,
         ),
       );
