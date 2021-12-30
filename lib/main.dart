@@ -22,41 +22,35 @@ class App extends StatelessWidget {
         backgroundColor: Colors.green[900],
       ),
       
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children:  <Widget>[
-
-           ElevatedButton(
-            onPressed: null,
-            child: const Text(
-              "click",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-
-                ),
-              ),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>((Colors.amber))
-              ),
+      body: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Image.asset("assets/pexels-photo-1535162.jpeg")),
+          Expanded(
+            flex: 3,
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: const Text("Hello"),
+              color: Colors.cyan,
             ),
-          TextButton(
-            onPressed: null,
-            child: const Text(
-              "click",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-
-                ),
-              ),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>((Colors.amber))
-              ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: const Text("Hello"),
+              color: Colors.amberAccent,
             ),
-
-
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: const Text("Hello"),
+              color: Colors.greenAccent,
+            ),
+          )
         ],
       ),
 
