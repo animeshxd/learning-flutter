@@ -22,7 +22,43 @@ class App extends StatelessWidget {
         backgroundColor: Colors.green[900],
       ),
       
-      body: Column(),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children:  <Widget>[
+
+           ElevatedButton(
+            onPressed: null,
+            child: const Text(
+              "click",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+
+                ),
+              ),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>((Colors.amber))
+              ),
+            ),
+          TextButton(
+            onPressed: null,
+            child: const Text(
+              "click",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+
+                ),
+              ),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>((Colors.amber))
+              ),
+            ),
+
+
+        ],
+      ),
 
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
