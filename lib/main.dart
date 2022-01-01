@@ -1,71 +1,42 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: App()
-    ),
-  );
+  runApp(MaterialApp(
+    home: Quotelist(),
+  ));
 }
 
+class Quotelist extends StatefulWidget {
+  const Quotelist({Key? key}) : super(key: key);
 
-//StatelessWidget
-class App extends StatelessWidget {
-  const App({ Key? key }) : super(key: key);
+  @override
+  _QuotelistState createState() => _QuotelistState();
+}
+
+class _QuotelistState extends State<Quotelist> {
+  List<String> list = ["hello", "hi", "hola"];
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: const Text("hello  "),
-        centerTitle: true,
-        backgroundColor: Colors.green[900],
+        title: Text("List"),
+        backgroundColor: Colors.amber,
+        elevation: 0.1,
       ),
-      
-      body: Row(
-        children: [
-          Expanded(
-            flex: 2,
-            child: Image.asset("assets/pexels-photo-1535162.jpeg")),
-          Expanded(
-            flex: 3,
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              child: const Text("Hello"),
-              color: Colors.cyan,
-            ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              child: const Text("Hello"),
-              color: Colors.amberAccent,
-            ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              child: const Text("Hello"),
-              color: Colors.greenAccent,
-            ),
-          )
-        ],
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: list.map((e) => Text(e)).toList(),
       ),
-
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
-        child: Icon(
-          Icons.add,
-          color: Colors.black,
-          size: 40,
-          ),
-        backgroundColor: Colors.green,
-        ),
-
-        
-        
-      );
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            list.add("f**k you");
+          });
+        },
+        child: Icon(Icons.add),
+      ),
+    );
   }
 }
