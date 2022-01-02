@@ -23,10 +23,6 @@ class _QuotelistState extends State<Quotelist> {
     Quote("4", "hello"),
   ];
 
-  Widget getQuoteCard(Quote quote) {
-    return QuoteCardWidget(quote);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +34,13 @@ class _QuotelistState extends State<Quotelist> {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: list.map(getQuoteCard).toList(),
+        children: list
+            .map((quote) => QuoteCardWidget(quote, () {
+                  setState(() {
+                    list.remove(quote);
+                  });
+                }))
+            .toList(),
       ),
     );
   }
