@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quote.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,7 +15,37 @@ class Quotelist extends StatefulWidget {
 }
 
 class _QuotelistState extends State<Quotelist> {
-  List<String> list = ["hello", "hi", "hola"];
+  List<Quote> list = [
+    Quote("1", "hello"),
+    Quote("2", "hello"),
+    Quote("3", "hello"),
+    Quote("4", "hello"),
+  ];
+
+  Widget getQuoteCard(Quote quote) {
+
+    return Card(
+      margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
+      child: Padding(
+        padding: const EdgeInsets.all(9.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              quote.data,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              
+              ),
+            SizedBox(height: 5,),
+            Text(quote.text)
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +58,7 @@ class _QuotelistState extends State<Quotelist> {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: list.map((e) => Text(e)).toList(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            list.add("f**k you");
-          });
-        },
-        child: Icon(Icons.add),
+        children: list.map(getQuoteCard).toList(),
       ),
     );
   }
